@@ -28,7 +28,7 @@
             <span id="tokenSimbolo">Buscando informação...</span>
           </h3>
           <h3>Total circulante: <span id="tokenTotalSupply">Buscando informação...</span></h3>
-          <h3>Total Saldo: <span id="saldo">Buscando informação...</span></h3>
+    
         </section>
         <hr />
         <section>
@@ -48,16 +48,21 @@
                 style="width: 500px"
               />
               <br /><br />
+             <!--
               <label for="formAmount">Consultar Tokens:</label>
               <br /><br />
               <input type="text" disabled name="formAmount" id="formAmount" />
-              <br /><br />
+              <br /><br />-->
               <input type="button" value="Consultar Tokens" onclick="consultarTotalSuply()" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input type="reset" value="Limpar" />
               
             
             </form>
+
+            <br />
+            <h3>Total Saldo: <span id="saldo">Buscando informação...</span></h3>
+
           </div>
         </section>
         <hr />
@@ -212,6 +217,7 @@
         event.preventDefault();
         const form = document.getElementById("formSaldo");
         alert("Aguarde a consulta ser processada pelo Provedor");
+        
         const saldoObj = await contract.balanceOf(form.formTo.value);
         saldo.innerHTML = saldoObj;
        
