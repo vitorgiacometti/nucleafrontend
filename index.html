@@ -34,8 +34,8 @@
           <h2>Saldo em Tokens</h2>
           <div>
             <form action="" name="formSaldo" id="formSaldo" method="get">
-              <label for="formTo">Endereço transferencia:</label>
-              <br /><br />
+              <label for="formTo">Endereço</label>
+              <br />
               <input
                 size="100"
                 maxlength="45"
@@ -47,21 +47,6 @@
                 style="width: 500px"
               />
               <br /><br />
-              <label for="formAmount">Quantidade:</label>
-              <br /><br />
-              <input type="number" disabled name="formAmount" id="formAmount" />
-              <br /><br />
-              <input type="button" value="Transfer" onclick="consultar()" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="reset" value="Limpar" />
-            </form>
-          </div>
-        </section>
-        <hr />
-        <section>
-          <h2>Consultar Tokens</h2>
-          <div>
-            <form action="" name="formTotalSuply" id="formTotalSuply" method="get">
               <label for="formAmount">Consultar Tokens:</label>
               <br /><br />
               <input type="text" disabled name="formAmount" id="formAmount" />
@@ -69,6 +54,8 @@
               <input type="button" value="Consultar Tokens" onclick="consultarTotalSuply()" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input type="reset" value="Limpar" />
+              
+            
             </form>
           </div>
         </section>
@@ -94,7 +81,7 @@
               <br /><br />
               <input type="number" placeholder="10000" required name="formAmount" id="formAmount" />
               <br /><br />
-              <input id="btnMintar" type="button" value="Mintar (gerar) Token" onclick="mintar()" />
+              <input id="btnMintar" type="button" value="Tranferir Token" onclick="mintar()" />
             </form>
           </div>
         </section>
