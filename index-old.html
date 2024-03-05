@@ -9,12 +9,12 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <title>Projeto Debenture - ERC20</title>
+    <title>Exercício Token - ERC20</title>
   </head>
   <body>
     <header>
       <div class="container">
-        <h1>Projeto Debenture - ERC20</h1>
+        <h1>Exercício Token - ERC20</h1>
       </div>
     </header>
     <br />
@@ -34,7 +34,7 @@
           <h2>Saldo em Tokens</h2>
           <div>
             <form action="" name="formSaldo" id="formSaldo" method="get">
-              <label for="formTo">Endereço transferencia:</label>
+              <label for="formTo">Endereço cliente:</label>
               <br /><br />
               <input
                 size="100"
@@ -51,7 +51,7 @@
               <br /><br />
               <input type="number" disabled name="formAmount" id="formAmount" />
               <br /><br />
-              <input type="button" value="Transfer" onclick="consultar()" />
+              <input type="button" value="Consultar" onclick="consultar()" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input type="reset" value="Limpar" />
             </form>
@@ -59,25 +59,10 @@
         </section>
         <hr />
         <section>
-          <h2>Consultar Tokens</h2>
-          <div>
-            <form action="" name="formTotalSuply" id="formTotalSuply" method="get">
-              <label for="formAmount">Consultar Tokens:</label>
-              <br /><br />
-              <input type="text" disabled name="formAmount" id="formAmount" />
-              <br /><br />
-              <input type="button" value="Consultar Tokens" onclick="consultarTotalSuply()" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="reset" value="Limpar" />
-            </form>
-          </div>
-        </section>
-        <hr />
-        <section>
-          <h2>Tranferir Token</h2>
+          <h2>Novo Token</h2>
           <div>
             <form action="" name="formMint" id="formMint" method="get">
-              <label for="formTo">Destinatário:</label>
+              <label for="formTo">Endereço da destinatário:</label>
               <br /><br />
               <input
                 type="text"
@@ -219,22 +204,12 @@
           form.reset();
         }
       }
-      
-      async function consultarTotalSuply() {
-        event.preventDefault();
-        const form = document.getElementById("formTotalSuply");
-        alert("Aguarde a consulta ser processada pelo Provedor");
-        const ratting = await contract.totalSupply();
-        form.formAmount.value = ratting;
-      }
-      
-      
       let signer = null;
       let provider;
       let network;
       let contract;
       let ABIHelper;
-      const contractAddress = "0xac53C6f9B8569eae9F211c451Fd1fEd92b30EE00";
+      const contractAddress = "0x89A2E711b2246B586E51f579676BE2381441A0d0";
       init();
     </script>
   </body>
